@@ -51,7 +51,7 @@ class DoctrineServiceProvider extends ServiceProvider
 
         if (!$this->isLumen()) {
             $this->publishes([
-                $this->getConfigPath() => config_path('doctrine.php'),
+                $this->getConfigPath() => config_path('laravel-doctrine.php'),
             ], 'config');
         }
     }
@@ -87,7 +87,7 @@ class DoctrineServiceProvider extends ServiceProvider
     protected function mergeConfig()
     {
         $this->mergeConfigFrom(
-            $this->getConfigPath(), 'doctrine'
+            $this->getConfigPath(), 'laravel-doctrine'
         );
 
         if ($this->isLumen()) {
