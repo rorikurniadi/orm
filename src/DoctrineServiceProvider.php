@@ -311,7 +311,7 @@ class DoctrineServiceProvider extends ServiceProvider
      */
     protected function getConfigPath()
     {
-        return __DIR__ . '/../config/doctrine.php';
+        return __DIR__ . '/../config/laravel-doctrine.php';
     }
 
     /**

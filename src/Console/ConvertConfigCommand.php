@@ -42,7 +42,7 @@ class ConvertConfigCommand extends SymfonyCommand
                 new InputOption('dest-path', null, InputOption::VALUE_OPTIONAL,
                     'Where the generated configuration should be placed', 'config'),
                 new InputOption('source-file', null, InputOption::VALUE_OPTIONAL,
-                    'Where the source configuration file is located.', 'config/doctrine.php')
+                    'Where the source configuration file is located.', 'config/laravel-doctrine.php')
             ]);
     }
 
@@ -63,7 +63,7 @@ class ConvertConfigCommand extends SymfonyCommand
         }
 
         if (($sourceFilePath = $input->getOption('source-file')) === null) {
-            $sourceFilePath = 'config/doctrine.php';
+            $sourceFilePath = 'config/laravel-doctrine.php';
         }
 
         $destPath = realpath($destPath);
